@@ -10,10 +10,19 @@
     <p style="margin-top: 40vh; text-align: center; font: normal 24px monospace;">
       Open the console 🤓
     </p>
-
-    <!-- Add some HTML in here -->
     <div class="container text-center">
-      <button id="click-me" class="mb-5">Click me</button>
+
+
+      <div class="d-flex align-items-center" data-controller="disable-button">
+        <button id="clickme"
+        class="btn btn-primary btn-lg"
+        data-action="click->disable-button#disable">Click me!</button>
+        
+        <a class="d-none ml-2"
+        data-disable-button-target="link"
+        data-action="click->disable-button#reset">Reset</a>
+      </div>
+        
       <form class="form-inline" id="search-form">
         <input type="text" class="form-control" placeholder="Find movie" id="search-input">
         <input type="submit" class="btn btn-primary">
